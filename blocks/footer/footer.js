@@ -46,6 +46,6 @@ setTimeout(function() {
     </footer>
     `;
     alert('hell0');
-    document.getElementsByClassName('footer-wrapper').innerHTML = 'hi';
+    document.getElementsByClassName('footer-wrapper').innerHTML = footerHTML;
 
 }, 2000);
