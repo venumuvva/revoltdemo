@@ -20,6 +20,7 @@ export default async function decorate(block) {
   block.append(footer);
 }
 document.addEventListener('DOMContentLoaded', (event) => {
+  if (document.readyState === "complete" || document.readyState === "interactive") {
     const bodyHTML = document.body.innerHTML;
     const footerHTML = `
     <footer style="background-color: black; color: white; padding: 20px; text-align: center;">
@@ -48,4 +49,5 @@ document.addEventListener('DOMContentLoaded', (event) => {
     `;
     // Replace the placeholder text with the actual footer HTML
     document.body.innerHTML = bodyHTML.replace('Footer Revolt', footerHTML);
+  }
 });
