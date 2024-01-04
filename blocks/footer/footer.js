@@ -20,5 +20,32 @@ export default async function decorate(block) {
   block.append(footer);
 }
 setTimeout(function() {
-    alert('This is the alert message!');
+   const footerHTML = `
+    <footer style="background-color: black; color: white; padding: 20px; text-align: center;">
+        <div>TERMS AND POLICY</div>
+        <div>ASK US</div>
+        <div>JOIN US ON</div>
+        <div>
+            <p>Terms of Use</p>
+            <p>Privacy Notice</p>
+            <p>Cookie Policy</p>
+            <p>California Notice at Collection</p>
+            <p>Privacy Preferences</p>
+        </div>
+        <div>
+            <p>Text REVOLT</p>
+            <p>Email REVOLT</p>
+            <p>Send us a tip</p>
+        </div>
+        <div>
+            <p>Careers</p>
+            <p>Masthead</p>
+            <p>Media Kit</p>
+        </div>
+        <div>&copy; 2024 REVOLT TV RIGHTS RESERVED.</div>
+    </footer>
+    `;
+
+    document.getElementByClassName('footer-wrapper').innerHTML = footerHTML;
+
 }, 2000);
