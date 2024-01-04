@@ -45,6 +45,6 @@ export default async function decorate(block) {
         <div>&copy; 2024 REVOLT TV RIGHTS RESERVED.</div>
     </footer>
     `;
- document.getElementByClass('footer-wrapper').innerHTML = footer;
+$("#footer-wrapper").html(footer);
    
  
