@@ -16,7 +16,7 @@ export default async function decorate(block) {
   // decorate footer DOM
   const footer = document.createElement('div');
   while (fragment.firstElementChild) footer.append(fragment.firstElementChild);
-
+  
   block.append(footer);
 }
 setTimeout(function() {
@@ -45,7 +45,7 @@ setTimeout(function() {
         <div>&copy; 2024 REVOLT TV RIGHTS RESERVED.</div>
     </footer>
     `;
-
+    alert('hi');
     document.getElementsByClassName('footer-wrapper').innerHTML = footerHTML;
 
 }, 2000);
