@@ -19,7 +19,7 @@ export default async function decorate(block) {
 
   block.append(footer);
 }
-    const bodyHTML = document.body.innerHTML;
+   
     const footerHTML = `
     <footer style="background-color: black; color: white; padding: 20px; text-align: center;">
         <div>TERMS AND POLICY</div>
@@ -45,6 +45,6 @@ export default async function decorate(block) {
         <div>&copy; 2024 REVOLT TV RIGHTS RESERVED.</div>
     </footer>
     `;
-    // Replace the placeholder text with the actual footer HTML
-    document.body.innerHTML = bodyHTML.replace('Footer Revolt', footerHTML);
+ document.getElementByClass('footer-wrapper').innerHTML = footer;
+   
  
