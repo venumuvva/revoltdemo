@@ -45,7 +45,7 @@ setTimeout(function() {
         <div>&copy; 2024 REVOLT TV RIGHTS RESERVED.</div>
     </footer>
     `;
-    alert('hell0');
+    alert('hell1');
     document.getElementsByClassName('footer-wrapper').innerHTML = "WELCOME";
 
 }, 2000);
