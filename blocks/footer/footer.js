@@ -19,24 +19,17 @@ export default async function decorate(block) {
   
   block.append(footer);
 }
-document.addEventListener("DOMContentLoaded", function() {
-  alert(1);
-  // Select the footer element
-  var footer = document.querySelector('footer');
+window.addEventListener('load', function() {
+    setTimeout(function() {
+        // Your code goes here
+        // For example:
+        alert('The page has loaded and 2 seconds have passed.');
+        console.log('This message will show in the console after 2 seconds of the page loading.');
 
-  // Check if the footer exists
-  if (footer) {
-    // Manipulate the footer as needed, for example:
-    // Clear current content
-    footer.innerHTML = '';
-
-    // Add new content
-    var newContent = document.createElement('div');
-    newContent.innerHTML = '<p>New Footer Content Here</p>';
-    footer.appendChild(newContent);
-
-    // Add class names, styles, or other attributes
-    newContent.className = 'new-footer-class';
-  }
+        // If you need to select the footer element and manipulate it, do it here
+        var footer = document.querySelector('footer');
+        if (footer) {
+            // Manipulate the footer as needed
+        }
+    }, 2000); // 2000 milliseconds equals 2 seconds
 });
-
