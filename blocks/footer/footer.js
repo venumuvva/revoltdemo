@@ -37,67 +37,82 @@ function afterLoad() {
                 background-color: black;
                 color: white;
                 display: flex;
-                justify-content: space-around;
-                padding: 20px;
+                justify-content: space-between;
+                padding: 20px 10%;
+                font-family: Arial, sans-serif;
                 flex-wrap: wrap;
             }
-            .footer-section {
-                flex: 1;
-                min-width: 150px;
+            .footer-column {
+                display: flex;
+                flex-direction: column;
+                min-width: 100px;
+                margin: 0 10px;
             }
-            .footer-section h4 {
-                color: #fff;
+            .footer-column h4 {
+                font-size: 16px;
+                margin-bottom: 10px;
             }
-            .footer-section ul {
-                list-style-type: none;
+            .footer-column ul {
+                list-style: none;
                 padding: 0;
+                margin: 0;
             }
-            .footer-section ul li a {
+            .footer-column ul li a {
                 color: #ccc;
                 text-decoration: none;
+                font-size: 14px;
+                line-height: 1.6;
                 transition: color 0.3s;
             }
-            .footer-section ul li a:hover {
+            .footer-column ul li a:hover {
                 color: #fff;
+            }
+            .footer-icons {
+                display: flex;
+                align-items: center;
+                font-size: 24px;
+            }
+            .footer-icons a {
+                margin: 0 5px;
             }
             .footer-bottom {
                 text-align: center;
+                width: 100%;
                 margin-top: 20px;
                 border-top: 1px solid #444;
                 padding-top: 20px;
             }
         </style>
         <div class="footer-container">
-            <div class="footer-section">
-                <h4>About Us</h4>
+            <div class="footer-column">
+                <h4>TERMS AND POLICY</h4>
                 <ul>
-                    <li><a href="/about">Who We Are</a></li>
-                    <li><a href="/contact">Contact Us</a></li>
+                    <li><a href="#">Terms of Use</a></li>
+                    <li><a href="#">Privacy Notice</a></li>
+                    <li><a href="#">Cookie Policy</a></li>
+                    <li><a href="#">California Notice at Collection</a></li>
+                    <li><a href="#">Privacy Preferences</a></li>
                 </ul>
             </div>
-            <div class="footer-section">
-                <h4>Services</h4>
+            <!-- Repeat for other columns using the same structure -->
+            <div class="footer-column">
+                <h4>ASK US</h4>
                 <ul>
-                    <li><a href="/services/1">Service One</a></li>
-                    <li><a href="/services/2">Service Two</a></li>
+                    <li><a href="#">Text REVOLT</a></li>
+                    <li><a href="#">Email REVOLT</a></li>
+                    <li><a href="#">Send us a tip</a></li>
                 </ul>
             </div>
-            <div class="footer-section">
-                <h4>Follow Us</h4>
-                <ul>
-                    <li><a href="https://twitter.com">Twitter</a></li>
-                    <li><a href="https://facebook.com">Facebook</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h4>Legal</h4>
-                <ul>
-                    <li><a href="/terms">Terms of Use</a></li>
-                    <li><a href="/privacy">Privacy Policy</a></li>
-                </ul>
+            <!-- ... other columns ... -->
+            <div class="footer-icons">
+                <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                <a href="#" aria-label="Snapchat"><i class="fab fa-snapchat-ghost"></i></a>
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 Your Company Name</p>
+                <p>&copy; 2024 REVOLT TV ALL RIGHTS RESERVED.</p>
             </div>
         </div>
     `;
