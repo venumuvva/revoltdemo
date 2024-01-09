@@ -18,26 +18,19 @@ export default async function decorate(block) {
   while (fragment.firstElementChild) footer.append(fragment.firstElementChild);
   
   block.append(footer);
-}
-function afterLoad() {
-    // Your code goes here
-    // For example:
-    alert('The page has loaded and 2 seconds have passed.');
-    console.log('This message will show in the console after 2 seconds of the page loading.');
-
-    // If you need to select the footer element and manipulate it, do it here
-    var footer = document.querySelector('footer');
-    if (footer) {
-        // Manipulate the footer as needed
-    }
-}
-
+}console.log('Current readyState:', document.readyState);
 if (document.readyState === 'complete') {
-    // If the load event has already fired and document is complete, run the code immediately
+    console.log('Document is already complete. Running the code immediately.');
     setTimeout(afterLoad, 2000);
 } else {
-    // If the load event hasn't fired, use the load event listener
+    console.log('Document is not complete. Setting load event listener.');
     window.addEventListener('load', function() {
+        console.log('Load event fired. Running the code after a delay.');
         setTimeout(afterLoad, 2000);
     });
+}
+
+function afterLoad() {
+    console.log('Running afterLoad function.');
+    // Your code to manipulate the footer goes here
 }
