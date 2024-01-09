@@ -19,3 +19,24 @@ export default async function decorate(block) {
   
   block.append(footer);
 }
+document.addEventListener("DOMContentLoaded", function() {
+  alert(1);
+  // Select the footer element
+  var footer = document.querySelector('footer');
+
+  // Check if the footer exists
+  if (footer) {
+    // Manipulate the footer as needed, for example:
+    // Clear current content
+    footer.innerHTML = '';
+
+    // Add new content
+    var newContent = document.createElement('div');
+    newContent.innerHTML = '<p>New Footer Content Here</p>';
+    footer.appendChild(newContent);
+
+    // Add class names, styles, or other attributes
+    newContent.className = 'new-footer-class';
+  }
+});
+
